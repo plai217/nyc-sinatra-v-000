@@ -1,0 +1,16 @@
+<%require 'pry'%>
+<%#binding.pry%>
+<%=@figure.name%>
+<form action="/figures/<%="#{@figure.id}"%>" method="POST">
+  <label>Edit Name: </label><input id="figure_name" type="text" name="figure[name]"><br>
+  <label>Edit Titles: </label>   
+  <% Title.all.each do |title| %>
+    <%= title.name %>
+    <input id="title_<%=title.id%>" 
+           type="checkbox" 
+           name="figure[title_ids][]" 
+           value="<%=title.id%>">
+  <% end %><br>
+  <label>Add Landmark: </label><input id="new_landmark" type="text" name="figure[landmark]"><br>
+  <input type="submit" value="Edit Figure">
+</form>

@@ -1,0 +1,9 @@
+<%#require 'pry'%>
+<%#binding.pry%>
+<%= @landmark.name %>
+<%= @landmark.year_completed %>
+<form action="/landmarks/<%="#{@landmark.id}"%>" method="POST">
+  <input id="name" type="text" name="landmark[name]"><br>
+  <input id="year_completed" type="text" name="landmark[year_completed]"><br>
+  <input type="submit" value="Edit Landmark">
+</form>

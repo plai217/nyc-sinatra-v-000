@@ -1,0 +1,9 @@
+<%#require 'pry'%>
+<%#binding.pry%>
+<form method="POST" action="/landmarks/new">
+  <label>Landmark Name: </label>
+    <input id="landmark_name" type="text" name="landmark[name]"><br>
+  <label>Landmark Year Completed: </label>
+    <input id="landmark_year_completed" type="text" name="landmark[year_completed]"><br>
+  <input type="submit" value="Create New Landmark">
+</form>
